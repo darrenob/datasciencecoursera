@@ -41,7 +41,7 @@ data_melted <- melt(mean_sd_data, id.var = c("subject", "activities"))
 data_means = dcast(data_melted, subject + activities ~ variable, mean)
 
 # Write table and display the means
-write.table(data_means, "data/data_means.txt")
+write.table(data_means, "data/data_means.txt", row.names=FALSE)
 data_means
 
 
