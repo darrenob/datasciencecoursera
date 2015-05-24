@@ -22,7 +22,11 @@ All activity is accries out in the script run_analysis.R which does the followin
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 + The data was melted by activity and subject and then dcast to get the means
 
-The resulting data is displayed on screen and also saved in data/data_means.txt in tabular format.
+The resulting data is displayed on screen and also saved in data/data_means.txt in tabular format. To read this data, use this command in R
+
+```{r}
+means <- read.table("data/data_means.txt", header = TRUE)
+```
 
 ## Dependencies
 The `reshape2` package is required for the run_analysis.R script to work. You can install it like this:
